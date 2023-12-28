@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO = 'https://github.com/your-username/your-repo.git'
-        GIT_CREDENTIALS_ID = 'your-git-credentials-id'
+        GIT_REPO = 'https://github.com/mohithdevops9/jenkins_pipelines.git'
+        GIT_CREDENTIALS_ID = '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'
         BRANCH_NAME = 'main'
     }
 
