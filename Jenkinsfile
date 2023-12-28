@@ -33,7 +33,7 @@ pipeline {
                     sh 'git config --global user.email "mohithdevops9@gmail.com"'
                     sh 'git config --global user.name "mohithdevops9"'
                     // Push changes back to the repository
-                    sh 'git push origin main'
+                    sh 'git push -u origin main'
                 }
             }
         }
@@ -42,7 +42,7 @@ pipeline {
     post {
         always {
             // Clean up workspace after the pipeline execution
-            cleanWs()
+            echo "running always"
         }
     }
 }
