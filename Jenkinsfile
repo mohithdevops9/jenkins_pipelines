@@ -2,9 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO = 'https://github.com/mohithdevops9/jenkins_pipelines.git'
-        GIT_CREDENTIALS_ID = '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'
-        BRANCH_NAME = 'main'
+        GIT_REPO = 'https://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@github.com/mohithdevops9/jenkins_pipelines.git'
     }
 
     stages {
@@ -32,7 +30,8 @@ pipeline {
                     // Add and commit changes
                     sh 'git add .'
                     sh 'git commit -m "Jenkins Pipeline commit"'
-
+                    sh 'git config --global user.email "mohithdevops9@gmail.com"'
+                    sh 'git config --global user.name "mohithdevops9"'
                     // Push changes back to the repository
                     sh 'git push origin main'
                 }
